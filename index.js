@@ -108,9 +108,9 @@ var unifiedServer = function(req,res){
 var handlers = {};
 
 
-//Ping Handler
+//Hello handler: any request to /hello gets a JSON welcome message
 handlers.hello = function(data,callback){
-	callback(200);
+	callback(200,{'message' : 'Hello World! Welcome to the API.'});
 };
 
 //Sample Handler
